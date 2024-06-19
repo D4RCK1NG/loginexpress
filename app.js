@@ -9,6 +9,9 @@ const login = require('./login');
 const registro = require('./registro');
 const { obtenerUsuarios, eliminarUsuario } = require('./usuario');
 const validar = require('./validar');
+const bcrypt = require ('bcrypt');
+const saltRounds =10;
+const md5 = require ('md5');
 
 mysql://root:llTqPYiJaaoLYrcWpfDcyGYhXxgMvQpK@roundhouse.proxy.rlwy.net:f/railway
 
