@@ -5,14 +5,11 @@ const port = process.env.PORT || 3000;
 
 const cors = require('cors')
 const session = require('express-session')
-const md5 = require('md5')
-const bcrypt = require('bcrypt');
 const login = require('./login');
 const registro = require('./registro');
 const { obtenerUsuarios, eliminarUsuario } = require('./usuario');
 const validar = require('./validar');
-const saltRounds = 10;
-const myPlaintextPassword ='s0/\/\P4$$w0rD';
+
 mysql://root:llTqPYiJaaoLYrcWpfDcyGYhXxgMvQpK@roundhouse.proxy.rlwy.net:f/railway
 
 app.use(cors({
