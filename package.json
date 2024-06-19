@@ -1,8 +1,8 @@
 {
     "dependencies":{
         "express": "^4.17.1",        
-        "mysql2": "^2.18.1",
-        "express-session": "1.18.0"        
+        "mysql": "^2.18.1",
+        "express-session": "1.18.0"
     },
     "scripts": {
         "dev": "node --watch app.js"
