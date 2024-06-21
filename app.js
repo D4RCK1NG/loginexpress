@@ -16,7 +16,7 @@ const md5 = require ('md5');
 mysql://root:llTqPYiJaaoLYrcWpfDcyGYhXxgMvQpK@roundhouse.proxy.rlwy.net:f/railway
 
 app.use(cors({
-  origin: process.env.URLFRONTEND ||'http://localhost:5173',
+  origin: process.env.HOSTFRONTEND ||'http://localhost:5173',
   credentials: true
 }))
 app.use(session({
