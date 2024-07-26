@@ -12,6 +12,8 @@ const validar = require('./validar');
 const bcrypt = require ('bcrypt');
 const saltRounds =10;
 const md5 = require ('md5');
+const connection = require('./conexion');
+const MySQLStore = require('express-mysql-session')(session);
 
 mysql://root:llTqPYiJaaoLYrcWpfDcyGYhXxgMvQpK@roundhouse.proxy.rlwy.net:f/railway
 
@@ -19,6 +21,7 @@ app.use(cors({
   origin: process.env.HOSTFRONTEND ||'http://localhost:5173',
   credentials: true
 }))
+const sessionStore = new MySQLStore({}/* session store options */, connection);
 app.use(session({
   secret: process.env.SECRETSESSION || 'ljffflfffljffl',
   proxy: process.env.NODE_ENV === 'production',
